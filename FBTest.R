@@ -1,0 +1,1 @@
+summary(PlusFB$ff_avg_speed)
