@@ -1,0 +1,39 @@
+IP Hist
+
+Even Usage
+ggplot(EvenUsage, aes(`IP/G`)) +
+    geom_histogram(binwidth = .1) +
+    ggtitle("Even Usage (Fastball usage between 48% and 62%)") +
+    xlim(4, 6.5) +
+    ylim(0, 15)
+    
+    
+FBDominant
+
+ggplot(FBDominant, aes(`IP/G`)) +
+    geom_histogram(binwidth = .1) +
+    ggtitle("Fastball Dominant (Fastball Usage Over 62%)") +
+    xlim(4, 6.5) +
+    ylim(0, 15)
+    
+    
+SecondaryFocused
+
+ggplot(SecondaryFocused, aes(`IP/G`)) +
+    geom_histogram(binwidth = .1) +
+    ggtitle("Secondary Focused (Fastball Usage Under 48%)") +
+    xlim(4, 6.5) +
+    ylim(0, 15)
+    
+    Split Screen
+    
+par(
+    mfrow=c(1,3),
+    mar=c(4,4,1,0)
+)
+hist(FBDominant$`IP/G`, col=rgb(1,0,0,0.5), xlab= "IP/G", xlim = c(3.9, 7), ylim = c(0, 20), breaks = 30, main = "FB Dominant")
+hist(EvenUsage$`IP/G`, col=rgb(0,0,1,0.5), xlab= "IP/G", xlim = c(3.9, 7), ylim = c(0, 20), breaks = 30, main = "Even Usage")
+hist(SecondaryFocused$`IP/G`, col=rgb(0,0,1,0.5), xlab= "IP/G", xlim = c(3.9, 7), ylim = c(0, 20), breaks = 30, main = "Secondary Dominant")
+
+
+    
