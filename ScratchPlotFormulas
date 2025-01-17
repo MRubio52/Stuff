@@ -31,7 +31,7 @@ par(
     mfrow=c(1,3),
     mar=c(4,4,1,0)
 )
-hist(FBDominant$`IP/G`, col=rgb(1,0,0,0.5), xlab= "IP/G", xlim = c(3.9, 7), ylim = c(0, 20), breaks = 30, main = "FB Dominant")
+hist(FBDominant$`IP/G`, col=rgb(51,51,51), xlab= "IP/G", xlim = c(3.9, 7), ylim = c(0, 20), breaks = 30, main = "FB Dominant")
 hist(EvenUsage$`IP/G`, col=rgb(0,0,1,0.5), xlab= "IP/G", xlim = c(3.9, 7), ylim = c(0, 20), breaks = 30, main = "Even Usage")
 hist(SecondaryFocused$`IP/G`, col=rgb(0,0,1,0.5), xlab= "IP/G", xlim = c(3.9, 7), ylim = c(0, 20), breaks = 30, main = "Secondary Dominant")
 
